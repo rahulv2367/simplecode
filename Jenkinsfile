@@ -1,10 +1,10 @@
 podTemplate(yaml: '''
-#    apiVersion: v1
-#    kind: Pod
-#    spec:
-#      containers:
-#      - name: jnlp
-#        image: jenkins/inbound-agent:latest 
+    apiVersion: v1
+    kind: Pod
+    spec:
+      containers:
+      - name: jnlp
+        image: jenkins/inbound-agent:latest 
 #      - name: trivy
 #        image: 058264170697.dkr.ecr.ap-south-1.amazonaws.com/jenkins:trivy-0.49.1
 #        command:
@@ -49,6 +49,7 @@ node(POD_LABEL) {
       container('jnlp') {
           sh '''
             ls
+            uname -a 
           '''
       }
     }
