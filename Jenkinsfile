@@ -4,7 +4,7 @@ podTemplate(yaml: '''
     spec:
       containers:
       - name: jnlp
-        image: jenkins:agent-jdk21
+        image: jenkins/inbound-agent:latest 
 #      - name: trivy
 #        image: 058264170697.dkr.ecr.ap-south-1.amazonaws.com/jenkins:trivy-0.49.1
 #        command:
